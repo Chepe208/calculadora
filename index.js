@@ -1,3 +1,8 @@
+// Función para sumar dos números
+function sumar(num1, num2) {
+  return num1 + num2;
+}
+
 // Función principal del programa
 function calculadora() {
   var opcion = prompt(
@@ -10,14 +15,35 @@ function calculadora() {
     num2 = parseFloat(prompt("Ingrese el segundo número:"));
   }
 
-  alert(
-    "la operacion es " +
-      opcion +
-      " el primer valor es " +
-      num1 +
-      " el segundo valor es " +
-      num2
-  );
+  switch (opcion) {
+    case "1":
+      resultado = sumar(num1, num2);
+      break;
+    case "2":
+      resultado = restar(num1, num2);
+      break;
+    case "3":
+      resultado = multiplicar(num1, num2);
+      break;
+    case "4":
+      resultado = dividir(num1, num2);
+      break;
+    case "5":
+      resultado = factorial(num1);
+      break;
+    case "6":
+      var exponenteNum = parseFloat(prompt("Ingrese el exponente:"));
+      resultado = exponente(num1, exponenteNum);
+      break;
+    case "7":
+      resultado = raizCuadrada(num1);
+      break;
+    default:
+      resultado = "Opción no válida";
+      break;
+  }
+
+  alert("El resultado es: " + resultado);
 }
 
 // Llamar a la función principal
