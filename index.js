@@ -31,6 +31,12 @@ function factorial(n) {
   return result;
 }
 
+// Funcion para tener el exponente de un numero
+function exponente(base, exp) {
+  return Math.pow(base, exp);
+}
+
+
 // Función principal del programa
 function calculadora() {
   var opcion = prompt(
